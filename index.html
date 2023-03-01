@@ -16,14 +16,18 @@
 
 <script>
   
-  for (let i = 0; i < 1000; i++) {
-    let ran = Math.random()
-    if (ran > 0.5) {
-      document.body.innerText += '／'
+   function draw () {
+    	requestAnimationFrame(draw)
+    	let ran = Math.random()
+    	if (ran > 0.5) {
+				document.body.innerText += '／'
     } else {
-      document.body.innerText += '＼'
+      	document.body.innerText += '＼'
     }
+     document.body.scrollTop = document.body.scrollHeight
   }
 
-
+ 	//window.addEventListener('click', draw)
+  draw()
+  
 </script>
